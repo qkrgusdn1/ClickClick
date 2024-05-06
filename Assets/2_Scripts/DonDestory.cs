@@ -16,7 +16,6 @@ public class DonDestory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
         musicAudioSource = GetComponent<AudioSource>();
-        musicVolume = PlayerPrefs.GetFloat("MusicVolume", musicVolume);
         musicAudioSource.volume = musicVolume;
     }
 

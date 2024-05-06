@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        DonDestory.instance.score = score;
         UIManager.Instance.OnScoreChange(score, maxScore);
 
         NoteManager.Instance.Create();
