@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     int score;
     int nextNoteGroupUnlockCnt;
@@ -18,10 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float minusTime;
 
     public Animator appleAni;
-    private void Awake()
-    {
-        Instance = this;
-    }
+    
 
     private void Start()
     {
